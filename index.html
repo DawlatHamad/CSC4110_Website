@@ -11,6 +11,20 @@
     <!-- custom css --> 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Email js -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+        publicKey: "dM-mOJZZdWHhIYclG",
+    });
+    })();
+    </script>
+
+    <!-- custom js -->
+    <script src="js/email.js"></script>
 </head>
 <body>
 
@@ -25,6 +39,7 @@
             <a href="#project1">Project 1</a>
             <a href="#project2">Project 2</a>
             <a href="#project3">Project 3</a>
+            <a href="#contact">Contact Us</a>
         </nav>
     </header>
 
@@ -55,7 +70,7 @@
             <img src="images/purple_fridge.png" alt="Purple Line Art Fridge">
         </div>
         <div class="project1-content">
-            <h2 class="heading1">FoodConnect</h2>
+            <h2 class="heading1">FoodConnect V.1</h2>
             <h3>Inventory control using Python and .JSON!</h3>
             <br></br>
             <a href="https://github.com/Nathan-Chantiny/Fridge-Inventory" class="btn">Link</a>
@@ -65,10 +80,10 @@
     <!-- project 2 section design -->
     <section class="project2" id="project2">
         <div class="project2-img">
-            <img src="images/wip1.png" alt="Work in Progress">
+            <img src="images/purple_fridge.png" alt="Purple Line Art Fridge">
         </div>
         <div class="project2-content">
-            <h2 class="heading2">Project Two Name</h2>
+            <h2 class="heading2">FoodConnect V.2</h2>
             <h3>Add Information Here</h3>
             <br></br>
             <a href="#" class="btn">Link</a>
@@ -88,6 +103,34 @@
         </div>
     </section>
 
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <div class="contact-img">
+            <img src="images/email.png" alt="Purple Line Art Mail">
+        </div>
+        <div class="contact-info">
+            <h2 class="heading4">Contact Us</h2>
+            <div class="container">
+                <form id="contact-form">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Your first name" required>
+                    
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Your last name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                    
+                    <button type="submit" class="btn" onclick="sendMail()">Submit</button>
+                </form>                
+            </div>
+        </div>
+    </section>
+    
+
     <!-- footer design -->
     <footer class="footer">
         <div class="footer-text">
@@ -104,6 +147,33 @@
 
     <!-- custom js -->
     <script src="js/script.js"></script>
-    
+
+    <!-- Email js 
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+            
+            // Collect form data
+            const form = this;
+            const formData = {
+                firstname: form.firstname.value,
+                lastname: form.lastname.value,
+                email: form.email.value,
+                message: form.message.value
+            };
+
+            // Send the email
+            emailjs.send('service_9fk8n3q', 'template_6alx8dv', formData)
+                .then(function(response) {
+                    alert('Email sent successfully!');
+                    form.reset(); // Reset the form after submission
+                }, function(error) {
+                    alert('Failed to send email. Please try again.');
+                    console.error('EmailJS error:', error);
+                });
+        });
+    </script> -->
+
+
 </body>
 </html>
