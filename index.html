@@ -148,32 +148,5 @@
     <!-- custom js -->
     <script src="js/script.js"></script>
 
-    <!-- Email js 
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from reloading the page
-            
-            // Collect form data
-            const form = this;
-            const formData = {
-                firstname: form.firstname.value,
-                lastname: form.lastname.value,
-                email: form.email.value,
-                message: form.message.value
-            };
-
-            // Send the email
-            emailjs.send('service_9fk8n3q', 'template_6alx8dv', formData)
-                .then(function(response) {
-                    alert('Email sent successfully!');
-                    form.reset(); // Reset the form after submission
-                }, function(error) {
-                    alert('Failed to send email. Please try again.');
-                    console.error('EmailJS error:', error);
-                });
-        });
-    </script> -->
-
-
 </body>
 </html>
