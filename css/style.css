@@ -1,4 +1,4 @@
-/* Body Style */ 
+/* Body Style */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 * {
@@ -295,7 +295,7 @@ section {
 }
 
 .project3-img img {
-    width: 35vw;
+    width: 60vw;
     height: auto;
 }
 
